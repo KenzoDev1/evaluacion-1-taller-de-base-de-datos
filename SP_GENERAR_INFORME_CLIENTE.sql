@@ -71,11 +71,25 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Categoría: ' || v_categoria);
     DBMS_OUTPUT.PUT_LINE('--- Ventas ---');
 
-    FOR i IN 1..v_ventas.COUNT LOOP
-        DBMS_OUTPUT.PUT_LINE('Venta ' || v_ventas(i).venta_id ||
-                             ' | Fecha: ' || v_ventas(i).fecha_venta ||
-                             ' | Monto: ' || v_ventas(i).total_venta);
-    END LOOP;
+    IF v_ventas.COUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('Este cliente no tiene ventas registradas.');
+    ELSE
+        FOR i IN 1..v_ventas.COUNT LOOP
+            DBMS_OUTPUT.PUT_LINE(
+                'Venta ' || v_ventas(i).venta_id ||
+                ' | Fecha: ' || v_ventas(i).fecha_venta ||
+                ' | Monto: ' || v_ventas(i).total_venta
+            );
+        END LOOP;
+    END IF;
+
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            DBMS_OUTPUT.PUT_LINE('ERROR: El cliente con ID ' || p_cliente_id || ' no existe.');
+        WHEN TOO_MANY_ROWS THEN
+            DBMS_OUTPUT.PUT_LINE('ERROR: Hay múltiples registros para el cliente con ID ' || p_cliente_id || '.');
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('ERROR inesperado: ' || SQLERRM);
 END;
 
 /
