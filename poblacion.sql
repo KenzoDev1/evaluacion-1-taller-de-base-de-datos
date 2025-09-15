@@ -1,93 +1,459 @@
--- Insertar Géneros
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Acción');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Aventura');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'RPG');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Estrategia');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Deportes');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Simulación');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Puzzle');
-INSERT INTO generos (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Terror');
+-- Insertar Género
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Acción');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Aventura');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'RPG');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Estrategia');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Deportes');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Simulación');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Puzzle');
+INSERT INTO genero (genero_id, nombre_genero) VALUES (seq_generos.NEXTVAL, 'Terror');
 
--- Insertar Plataformas
-INSERT INTO plataformas (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'PC');
-INSERT INTO plataformas (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'PlayStation 5');
-INSERT INTO plataformas (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'Xbox Series X');
-INSERT INTO plataformas (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'Nintendo Switch');
+-- Insertar Plataforma
+INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'PC');
+INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'PlayStation 5');
+INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'Xbox Series X');
+INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'Nintendo Switch');
 
--- Insertar Desarrolladores
-INSERT INTO desarrolladores (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'CD Projekt Red');
-INSERT INTO desarrolladores (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Rockstar Games');
-INSERT INTO desarrolladores (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Naughty Dog');
-INSERT INTO desarrolladores (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'FromSoftware');
-INSERT INTO desarrolladores (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Nintendo');
-INSERT INTO desarrolladores (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'EA Sports');
+-- Insertar Desarrolladore
+INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'CD Projekt Red');
+INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Rockstar Games');
+INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Naughty Dog');
+INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'FromSoftware');
+INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Nintendo');
+INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'EA Sports');
 
--- Insertar Videojuegos
-INSERT INTO videojuegos (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Witcher 3: Wild Hunt', 'Un juego de rol de mundo abierto.', TO_DATE('2015-05-19', 'YYYY-MM-DD'), 39.99, 150, 3, 1, 1);
-INSERT INTO videojuegos (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'Red Dead Redemption 2', 'Una épica historia del oeste americano.', TO_DATE('2018-10-26', 'YYYY-MM-DD'), 49.99, 120, 2, 2, 2);
-INSERT INTO videojuegos (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Last of Us Part II', 'Una intensa aventura post-apocalíptica.', TO_DATE('2020-06-19', 'YYYY-MM-DD'), 59.99, 200, 1, 2, 3);
-INSERT INTO videojuegos (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'Elden Ring', 'Un desafiante RPG de acción.', TO_DATE('2022-02-25', 'YYYY-MM-DD'), 69.99, 300, 3, 3, 4);
-INSERT INTO videojuegos (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Legend of Zelda: Breath of the Wild', 'Explora el vasto reino de Hyrule.', TO_DATE('2017-03-03', 'YYYY-MM-DD'), 59.99, 250, 2, 4, 5);
-INSERT INTO videojuegos (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'FIFA 23', 'El simulador de fútbol más popular.', TO_DATE('2022-09-27', 'YYYY-MM-DD'), 49.99, 400, 5, 1, 6);
+-- Insertar Videojuego
+INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Witcher 3: Wild Hunt', 'Un juego de rol de mundo abierto.', TO_DATE('2015-05-19', 'YYYY-MM-DD'), 39.99, 150, 3, 1, 1);
+INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'Red Dead Redemption 2', 'Una épica historia del oeste americano.', TO_DATE('2018-10-26', 'YYYY-MM-DD'), 49.99, 120, 2, 2, 2);
+INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Last of Us Part II', 'Una intensa aventura post-apocalíptica.', TO_DATE('2020-06-19', 'YYYY-MM-DD'), 59.99, 200, 1, 2, 3);
+INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'Elden Ring', 'Un desafiante RPG de acción.', TO_DATE('2022-02-25', 'YYYY-MM-DD'), 69.99, 300, 3, 3, 4);
+INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Legend of Zelda: Breath of the Wild', 'Explora el vasto reino de Hyrule.', TO_DATE('2017-03-03', 'YYYY-MM-DD'), 59.99, 250, 2, 4, 5);
+INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'FIFA 23', 'El simulador de fútbol más popular.', TO_DATE('2022-09-27', 'YYYY-MM-DD'), 49.99, 400, 5, 1, 6);
 
 -- Insertar Clientes (más de 100 para un buen volumen de datos)
-DECLARE
-BEGIN
-    FOR i IN 1..150 LOOP
-        INSERT INTO clientes (cliente_id, nombre, apellido, email, fecha_registro, telefono)
-        VALUES (
-            seq_clientes.NEXTVAL,
-            'Nombre' || i,
-            'Apellido' || i,
-            'cliente' || i || '@email.com',
-            SYSDATE - DBMS_RANDOM.VALUE(1, 365),
-            '9' || TRUNC(DBMS_RANDOM.VALUE(10000000, 99999999))
-        );
-    END LOOP;
-    COMMIT;
-END;
-/
+-- Insertar Cliente (100 clientes explícitos)
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Vicente', 'Alarcón', 'vicente.alarcon@email.com', TO_DATE('2023-01-15', 'YYYY-MM-DD'), '9876543210');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ignacio', 'Bittner', 'ignacio.bittner@email.com', TO_DATE('2023-02-20', 'YYYY-MM-DD'), '9123456789');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sofía', 'González', 'sofia.gonzalez@email.com', TO_DATE('2023-03-10', 'YYYY-MM-DD'), '9567890123');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pedro', 'Ramírez', 'pedro.ramirez@email.com', TO_DATE('2023-04-05', 'YYYY-MM-DD'), '9234567890');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ana', 'Soto', 'ana.soto@email.com', TO_DATE('2023-05-25', 'YYYY-MM-DD'), '9789012345');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Felipe', 'Díaz', 'felipe.diaz@email.com', TO_DATE('2023-06-30', 'YYYY-MM-DD'), '9456789012');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Carolina', 'Muñoz', 'carolina.munoz@email.com', TO_DATE('2023-07-18', 'YYYY-MM-DD'), '9876123456');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Diego', 'Pérez', 'diego.perez@email.com', TO_DATE('2023-08-01', 'YYYY-MM-DD'), '9345678901');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Valentina', 'Torres', 'valentina.torres@email.com', TO_DATE('2023-09-09', 'YYYY-MM-DD'), '9678901234');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Martín', 'Ortega', 'martin.ortega@email.com', TO_DATE('2023-10-22', 'YYYY-MM-DD'), '9012345678');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Francisca', 'Silva', 'francisca.silva@email.com', TO_DATE('2023-11-05', 'YYYY-MM-DD'), '9543210987');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Javier', 'Rojas', 'javier.rojas@email.com', TO_DATE('2023-12-19', 'YYYY-MM-DD'), '9876501234');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Camila', 'Gómez', 'camila.gomez@email.com', TO_DATE('2024-01-01', 'YYYY-MM-DD'), '9123459876');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Andrés', 'Castro', 'andres.castro@email.com', TO_DATE('2024-02-14', 'YYYY-MM-DD'), '9654321098');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Lorena', 'Vargas', 'lorena.vargas@email.com', TO_DATE('2024-03-29', 'YYYY-MM-DD'), '9098765432');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sebastián', 'Fuentes', 'sebastian.fuentes@email.com', TO_DATE('2024-04-11', 'YYYY-MM-DD'), '9432109876');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Paula', 'Molina', 'paula.molina@email.com', TO_DATE('2024-05-01', 'YYYY-MM-DD'), '9876012345');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'José', 'Araya', 'jose.araya@email.com', TO_DATE('2024-06-03', 'YYYY-MM-DD'), '9210987654');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Renata', 'Núñez', 'renata.nunez@email.com', TO_DATE('2024-07-07', 'YYYY-MM-DD'), '9765432109');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Rodrigo', 'Henríquez', 'rodrigo.henriquez@email.com', TO_DATE('2024-08-12', 'YYYY-MM-DD'), '9543219876');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniela', 'Espinoza', 'daniela.espinoza@email.com', TO_DATE('2024-09-01', 'YYYY-MM-DD'), '9876543012');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Gabriel', 'Herrera', 'gabriel.herrera@email.com', TO_DATE('2024-10-14', 'YYYY-MM-DD'), '9123450987');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Natalia', 'Fuentes', 'natalia.fuentes@email.com', TO_DATE('2024-11-20', 'YYYY-MM-DD'), '9654321012');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ricardo', 'Navarro', 'ricardo.navarro@email.com', TO_DATE('2024-12-05', 'YYYY-MM-DD'), '9098765123');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Paola', 'Acuña', 'paola.acuna@email.com', TO_DATE('2025-01-18', 'YYYY-MM-DD'), '9432109801');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristian', 'Osorio', 'cristian.osorio@email.com', TO_DATE('2025-02-23', 'YYYY-MM-DD'), '9876012987');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Fernanda', 'Vergara', 'fernanda.vergara@email.com', TO_DATE('2025-03-08', 'YYYY-MM-DD'), '9210987012');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Patricio', 'Salazar', 'patricio.salazar@email.com', TO_DATE('2025-04-01', 'YYYY-MM-DD'), '9765432190');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Andrea', 'López', 'andrea.lopez@email.com', TO_DATE('2025-05-15', 'YYYY-MM-DD'), '9543219012');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sergio', 'Valdés', 'sergio.valdes@email.com', TO_DATE('2025-06-20', 'YYYY-MM-DD'), '9876543290');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Romina', 'Jara', 'romina.jara@email.com', TO_DATE('2025-07-04', 'YYYY-MM-DD'), '9123456790');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Benjamín', 'Quintana', 'benjamin.quintana@email.com', TO_DATE('2025-08-18', 'YYYY-MM-DD'), '9654321901');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Tamara', 'Riquelme', 'tamara.riquelme@email.com', TO_DATE('2025-09-25', 'YYYY-MM-DD'), '9098765490');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Esteban', 'Sánchez', 'esteban.sanchez@email.com', TO_DATE('2025-10-09', 'YYYY-MM-DD'), '9432109890');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Alejandra', 'Gallardo', 'alejandra.gallardo@email.com', TO_DATE('2025-11-01', 'YYYY-MM-DD'), '9876012390');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Manuel', 'Reyes', 'manuel.reyes@email.com', TO_DATE('2025-12-06', 'YYYY-MM-DD'), '9210987690');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Constanza', 'Morales', 'constanza.morales@email.com', TO_DATE('2026-01-11', 'YYYY-MM-DD'), '9765432190');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pablo', 'Vidal', 'pablo.vidal@email.com', TO_DATE('2026-02-17', 'YYYY-MM-DD'), '9543210990');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Valentina', 'Tapia', 'valentina.tapia@email.com', TO_DATE('2026-03-24', 'YYYY-MM-DD'), '9876543280');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Nicolás', 'Garrido', 'nicolas.garrido@email.com', TO_DATE('2026-04-09', 'YYYY-MM-DD'), '9123456780');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniela', 'Sepúlveda', 'daniela.sepulveda@email.com', TO_DATE('2026-05-02', 'YYYY-MM-DD'), '9654321080');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mauricio', 'Cáceres', 'mauricio.caceres@email.com', TO_DATE('2026-06-16', 'YYYY-MM-DD'), '9098765480');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Camila', 'Gutiérrez', 'camila.gutierrez@email.com', TO_DATE('2026-07-28', 'YYYY-MM-DD'), '9432109880');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mario', 'Ortega', 'mario.ortega@email.com', TO_DATE('2026-08-04', 'YYYY-MM-DD'), '9876012380');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Fernanda', 'Pinto', 'fernanda.pinto@email.com', TO_DATE('2026-09-19', 'YYYY-MM-DD'), '9210987680');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Fabián', 'Soto', 'fabian.soto@email.com', TO_DATE('2026-10-30', 'YYYY-MM-DD'), '9765432180');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Isidora', 'Herrera', 'isidora.herrera@email.com', TO_DATE('2026-11-12', 'YYYY-MM-DD'), '9543210980');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sebastián', 'Vargas', 'sebastian.vargas@email.com', TO_DATE('2026-12-25', 'YYYY-MM-DD'), '9876543270');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Gabriela', 'Gallardo', 'gabriela.gallardo@email.com', TO_DATE('2027-01-08', 'YYYY-MM-DD'), '9123456770');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Javier', 'Reyes', 'javier.reyes@email.com', TO_DATE('2027-02-14', 'YYYY-MM-DD'), '9654321070');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Loreto', 'Morales', 'loreto.morales@email.com', TO_DATE('2027-03-01', 'YYYY-MM-DD'), '9098765470');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Elias', 'Vidal', 'elias.vidal@email.com', TO_DATE('2027-04-05', 'YYYY-MM-DD'), '9432109870');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Catalina', 'Garrido', 'catalina.garrido@email.com', TO_DATE('2027-05-18', 'YYYY-MM-DD'), '9876012370');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristóbal', 'Sepúlveda', 'cristobal.sepulveda@email.DATE', TO_DATE('2027-06-22', 'YYYY-MM-DD'), '9210987670');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pilar', 'Cáceres', 'pilar.caceres@email.com', TO_DATE('2027-07-29', 'YYYY-MM-DD'), '9765432170');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ricardo', 'Gutiérrez', 'ricardo.gutierrez@email.com', TO_DATE('2027-08-11', 'YYYY-MM-DD'), '9543210970');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Karla', 'Ortega', 'karla.ortega@email.com', TO_DATE('2027-09-03', 'YYYY-MM-DD'), '9876543260');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Gustavo', 'Pinto', 'gustavo.pinto@email.com', TO_DATE('2027-10-10', 'YYYY-MM-DD'), '9123456760');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Fabiola', 'Soto', 'fabiola.soto@email.com', TO_DATE('2027-11-23', 'YYYY-MM-DD'), '9654321060');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristian', 'Herrera', 'cristian.herrera@email.com', TO_DATE('2027-12-07', 'YYYY-MM-DD'), '9098765460');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Antonia', 'Vargas', 'antonia.vargas@email.com', TO_DATE('2028-01-14', 'YYYY-MM-DD'), '9432109860');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Fabián', 'Gallardo', 'fabian.gallardo@email.com', TO_DATE('2028-02-28', 'YYYY-MM-DD'), '9876012360');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Macarena', 'Reyes', 'macarena.reyes@email.com', TO_DATE('2028-03-12', 'YYYY-MM-DD'), '9210987660');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Emilio', 'Morales', 'emilio.morales@email.com', TO_DATE('2028-04-25', 'YYYY-MM-DD'), '9765432160');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniela', 'Vidal', 'daniela.vidal@email.com', TO_DATE('2028-05-30', 'YYYY-MM-DD'), '9543210960');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Carlos', 'Garrido', 'carlos.garrido@email.com', TO_DATE('2028-06-04', 'YYYY-MM-DD'), '9876543250');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Consuelo', 'Sepúlveda', 'consuelo.sepulveda@email.com', TO_DATE('2028-07-17', 'YYYY-MM-DD'), '9123456750');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Patricio', 'Cáceres', 'patricio.caceres@email.com', TO_DATE('2028-08-21', 'YYYY-MM-DD'), '9654321050');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mariana', 'Gutiérrez', 'mariana.gutierrez@email.com', TO_DATE('2028-09-02', 'YYYY-MM-DD'), '9098765450');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ignacio', 'Ortega', 'ignacio.ortega@email.com', TO_DATE('2028-10-15', 'YYYY-MM-DD'), '9432109850');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mónica', 'Pinto', 'monica.pinto@email.com', TO_DATE('2028-11-28', 'YYYY-MM-DD'), '9876012350');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Marcelo', 'Soto', 'marcelo.soto@email.com', TO_DATE('2028-12-11', 'YYYY-MM-DD'), '9210987650');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Claudia', 'Herrera', 'claudia.herrera@email.com', TO_DATE('2029-01-24', 'YYYY-MM-DD'), '9765432150');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Oscar', 'Vargas', 'oscar.vargas@email.com', TO_DATE('2029-02-09', 'YYYY-MM-DD'), '9543210950');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Alejandra', 'Gallardo', 'alejandra.gallardo@email.com', TO_DATE('2029-03-22', 'YYYY-MM-DD'), '9876543240');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Rubén', 'Reyes', 'ruben.reyes@email.com', TO_DATE('2029-04-16', 'YYYY-MM-DD'), '9123456740');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Laura', 'Morales', 'laura.morales@email.com', TO_DATE('2029-05-01', 'YYYY-MM-DD'), '9654321040');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Javier', 'Vidal', 'javier.vidal@email.com', TO_DATE('2029-06-08', 'YYYY-MM-DD'), '9098765440');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Silvia', 'Garrido', 'silvia.garrido@email.com', TO_DATE('2029-07-13', 'YYYY-MM-DD'), '9432109840');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ricardo', 'Sepúlveda', 'ricardo.sepulveda@email.com', TO_DATE('2029-08-26', 'YYYY-MM-DD'), '9876012340');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Paula', 'Cáceres', 'paula.caceres@email.com', TO_DATE('2029-09-09', 'YYYY-MM-DD'), '9210987640');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristóbal', 'Gutiérrez', 'cristobal.gutierrez@email.com', TO_DATE('2029-10-22', 'YYYY-MM-DD'), '9765432140');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Verónica', 'Ortega', 'veronica.ortega@email.com', TO_DATE('2029-11-05', 'YYYY-MM-DD'), '9543210940');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Luis', 'Pinto', 'luis.pinto@email.com', TO_DATE('2029-12-18', 'YYYY-MM-DD'), '9876543230');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Claudia', 'Soto', 'claudia.soto@email.com', TO_DATE('2030-01-01', 'YYYY-MM-DD'), '9123456730');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Eugenio', 'Herrera', 'eugenio.herrera@email.com', TO_DATE('2030-02-14', 'YYYY-MM-DD'), '9654321030');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Isabel', 'Vargas', 'isabel.vargas@email.com', TO_DATE('2030-03-29', 'YYYY-MM-DD'), '9098765430');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Diego', 'Gallardo', 'diego.gallardo@email.com', TO_DATE('2030-04-11', 'YYYY-MM-DD'), '9432109830');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Natalia', 'Reyes', 'natalia.reyes@email.com', TO_DATE('2030-05-01', 'YYYY-MM-DD'), '9876012330');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Felipe', 'Morales', 'felipe.morales@email.com', TO_DATE('2030-06-03', 'YYYY-MM-DD'), '9210987630');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Francisca', 'Vidal', 'francisca.vidal@email.com', TO_DATE('2030-07-07', 'YYYY-MM-DD'), '9765432130');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Juan', 'Garrido', 'juan.garrido@email.com', TO_DATE('2030-08-12', 'YYYY-MM-DD'), '9543210930');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Valentina', 'Sepúlveda', 'valentina.sepulveda@email.com', TO_DATE('2030-09-01', 'YYYY-MM-DD'), '9876543220');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Martín', 'Cáceres', 'martin.caceres@email.com', TO_DATE('2030-10-14', 'YYYY-MM-DD'), '9123456720');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Tamara', 'Gutiérrez', 'tamara.gutierrez@email.com', TO_DATE('2030-11-20', 'YYYY-MM-DD'), '9654321020');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Roberto', 'Ortega', 'roberto.ortega@email.com', TO_DATE('2030-12-05', 'YYYY-MM-DD'), '9098765420');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sofía', 'Pinto', 'sofia.pinto@email.com', TO_DATE('2031-01-18', 'YYYY-MM-DD'), '9432109820');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Benjamín', 'Soto', 'benjamin.soto@email.com', TO_DATE('2031-02-23', 'YYYY-MM-DD'), '9876012320');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mariana', 'Herrera', 'mariana.herrera@email.com', TO_DATE('2031-03-08', 'YYYY-MM-DD'), '9210987620');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pedro', 'Vargas', 'pedro.vargas@email.com', TO_DATE('2031-04-01', 'YYYY-MM-DD'), '9765432120');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Camila', 'Gallardo', 'camila.gallardo@email.com', TO_DATE('2031-05-15', 'YYYY-MM-DD'), '9543210920');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Andrés', 'Reyes', 'andres.reyes@email.com', TO_DATE('2031-06-20', 'YYYY-MM-DD'), '9876543210');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Carolina', 'Morales', 'carolina.morales@email.com', TO_DATE('2031-07-04', 'YYYY-MM-DD'), '9123456710');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Diego', 'Vidal', 'diego.vidal@email.com', TO_DATE('2031-08-18', 'YYYY-MM-DD'), '9654321010');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Valentina', 'Garrido', 'valentina.garrido@email.com', TO_DATE('2031-09-25', 'YYYY-MM-DD'), '9098765410');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sebastián', 'Sepúlveda', 'sebastian.sepulveda@email.com', TO_DATE('2031-10-09', 'YYYY-MM-DD'), '9432109810');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Constanza', 'Cáceres', 'constanza.caceres@email.com', TO_DATE('2031-11-01', 'YYYY-MM-DD'), '9876012310');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mauricio', 'Gutiérrez', 'mauricio.gutierrez@email.com', TO_DATE('2031-12-06', 'YYYY-MM-DD'), '9210987610');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniela', 'Ortega', 'daniela.ortega@email.com', TO_DATE('2032-01-11', 'YYYY-MM-DD'), '9765432110');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Esteban', 'Pinto', 'esteban.pinto@email.com', TO_DATE('2032-02-17', 'YYYY-MM-DD'), '9543210910');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Romina', 'Soto', 'romina.soto@email.com', TO_DATE('2032-03-24', 'YYYY-MM-DD'), '9876543200');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Patricio', 'Herrera', 'patricio.herrera@email.com', TO_DATE('2032-04-09', 'YYYY-MM-DD'), '9123456700');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Andrea', 'Vargas', 'andrea.vargas@email.com', TO_DATE('2032-05-02', 'YYYY-MM-DD'), '9654321000');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Gabriel', 'Gallardo', 'gabriel.gallardo@email.com', TO_DATE('2032-06-16', 'YYYY-MM-DD'), '9098765400');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pilar', 'Reyes', 'pilar.reyes@email.com', TO_DATE('2032-07-28', 'YYYY-MM-DD'), '9432109800');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ricardo', 'Morales', 'ricardo.morales@email.com', TO_DATE('2032-08-04', 'YYYY-MM-DD'), '9876012300');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Catalina', 'Vidal', 'catalina.vidal@email.com', TO_DATE('2032-09-19', 'YYYY-MM-DD'), '9210987600');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristian', 'Garrido', 'cristian.garrido@email.com', TO_DATE('2032-10-30', 'YYYY-MM-DD'), '9765432100');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Isidora', 'Sepúlveda', 'isidora.sepulveda@email.com', TO_DATE('2032-11-12', 'YYYY-MM-DD'), '9543210900');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'José', 'Cáceres', 'jose.caceres@email.com', TO_DATE('2032-12-25', 'YYYY-MM-DD'), '9876543209');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Loreto', 'Gutiérrez', 'loreto.gutierrez@email.com', TO_DATE('2033-01-08', 'YYYY-MM-DD'), '9123456709');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Margarita', 'Ortega', 'margarita.ortega@email.com', TO_DATE('2033-02-14', 'YYYY-MM-DD'), '9654321009');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniel', 'Pinto', 'daniel.pinto@email.com', TO_DATE('2033-03-01', 'YYYY-MM-DD'), '9098765409');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pamela', 'Soto', 'pamela.soto@email.com', TO_DATE('2033-04-05', 'YYYY-MM-DD'), '9432109809');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Benjamín', 'Herrera', 'benjamin.herrera@email.com', TO_DATE('2033-05-18', 'YYYY-MM-DD'), '9876012309');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ignacia', 'Vargas', 'ignacia.vargas@email.com', TO_DATE('2033-06-22', 'YYYY-MM-DD'), '9210987609');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pablo', 'Gallardo', 'pablo.gallardo@email.com', TO_DATE('2033-07-29', 'YYYY-MM-DD'), '9765432109');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Macarena', 'Reyes', 'macarena.reyes@email.com', TO_DATE('2033-08-11', 'YYYY-MM-DD'), '9543210909');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Javier', 'Morales', 'javier.morales@email.com', TO_DATE('2033-09-03', 'YYYY-MM-DD'), '9876543208');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Tamara', 'Vidal', 'tamara.vidal@email.com', TO_DATE('2033-10-10', 'YYYY-MM-DD'), '9123456708');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristóbal', 'Garrido', 'cristobal.garrido@email.com', TO_DATE('2033-11-23', 'YYYY-MM-DD'), '9654321008');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Verónica', 'Sepúlveda', 'veronica.sepulveda@email.com', TO_DATE('2033-12-07', 'YYYY-MM-DD'), '9098765408');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Luis', 'Cáceres', 'luis.caceres@email.com', TO_DATE('2034-01-14', 'YYYY-MM-DD'), '9432109808');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Claudia', 'Gutiérrez', 'claudia.gutierrez@email.com', TO_DATE('2034-02-28', 'YYYY-MM-DD'), '9876012308');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Eugenio', 'Ortega', 'eugenio.ortega@email.com', TO_DATE('2034-03-12', 'YYYY-MM-DD'), '9210987608');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Isabel', 'Pinto', 'isabel.pinto@email.com', TO_DATE('2034-04-25', 'YYYY-MM-DD'), '9765432108');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Diego', 'Soto', 'diego.soto@email.com', TO_DATE('2034-05-30', 'YYYY-MM-DD'), '9543210908');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Natalia', 'Herrera', 'natalia.herrera@email.com', TO_DATE('2034-06-04', 'YYYY-MM-DD'), '9876543207');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Felipe', 'Vargas', 'felipe.vargas@email.com', TO_DATE('2034-07-17', 'YYYY-MM-DD'), '9123456707');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Francisca', 'Gallardo', 'francisca.gallardo@email.com', TO_DATE('2034-08-21', 'YYYY-MM-DD'), '9654321007');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Juan', 'Reyes', 'juan.reyes@email.com', TO_DATE('2034-09-02', 'YYYY-MM-DD'), '9098765407');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Valentina', 'Morales', 'valentina.morales@email.com', TO_DATE('2034-10-15', 'YYYY-MM-DD'), '9432109807');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Martín', 'Vidal', 'martin.vidal@email.com', TO_DATE('2034-11-28', 'YYYY-MM-DD'), '9876012307');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Tamara', 'Garrido', 'tamara.garrido@email.com', TO_DATE('2034-12-11', 'YYYY-MM-DD'), '9210987607');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Roberto', 'Sepúlveda', 'roberto.sepulveda@email.com', TO_DATE('2035-01-24', 'YYYY-MM-DD'), '9765432107');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sofía', 'Cáceres', 'sofia.caceres@email.com', TO_DATE('2035-02-09', 'YYYY-MM-DD'), '9543210907');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Benjamín', 'Gutiérrez', 'benjamin.gutierrez@email.com', TO_DATE('2035-03-22', 'YYYY-MM-DD'), '9876543206');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mariana', 'Ortega', 'mariana.ortega@email.com', TO_DATE('2035-04-16', 'YYYY-MM-DD'), '9123456706');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pedro', 'Pinto', 'pedro.pinto@email.com', TO_DATE('2035-05-01', 'YYYY-MM-DD'), '9654321006');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Camila', 'Soto', 'camila.soto@email.com', TO_DATE('2035-06-08', 'YYYY-MM-DD'), '9098765406');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Andrés', 'Herrera', 'andres.herrera@email.com', TO_DATE('2035-07-13', 'YYYY-MM-DD'), '9432109806');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Carolina', 'Vargas', 'carolina.vargas@email.com', TO_DATE('2035-08-26', 'YYYY-MM-DD'), '9876012306');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Diego', 'Gallardo', 'diego.gallardo@email.com', TO_DATE('2035-09-09', 'YYYY-MM-DD'), '9210987606');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Valentina', 'Reyes', 'valentina.reyes@email.com', TO_DATE('2035-10-22', 'YYYY-MM-DD'), '9765432106');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sebastián', 'Morales', 'sebastian.morales@email.com', TO_DATE('2035-11-05', 'YYYY-MM-DD'), '9543210906');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Constanza', 'Vidal', 'constanza.vidal@email.com', TO_DATE('2035-12-18', 'YYYY-MM-DD'), '9876543205');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Mauricio', 'Garrido', 'mauricio.garrido@email.com', TO_DATE('2036-01-01', 'YYYY-MM-DD'), '9123456705');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniela', 'Sepúlveda', 'daniela.sepulveda@email.com', TO_DATE('2036-02-14', 'YYYY-MM-DD'), '9654321005');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Esteban', 'Cáceres', 'esteban.caceres@email.com', TO_DATE('2036-03-29', 'YYYY-MM-DD'), '9098765405');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Romina', 'Gutiérrez', 'romina.gutierrez@email.com', TO_DATE('2036-04-11', 'YYYY-MM-DD'), '9432109805');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Patricio', 'Ortega', 'patricio.ortega@email.com', TO_DATE('2036-05-01', 'YYYY-MM-DD'), '9876012305');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Andrea', 'Pinto', 'andrea.pinto@email.com', TO_DATE('2036-06-03', 'YYYY-MM-DD'), '9210987605');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Gabriel', 'Soto', 'gabriel.soto@email.com', TO_DATE('2036-07-07', 'YYYY-MM-DD'), '9765432105');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pilar', 'Herrera', 'pilar.herrera@email.com', TO_DATE('2036-08-12', 'YYYY-MM-DD'), '9543210905');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ricardo', 'Vargas', 'ricardo.vargas@email.com', TO_DATE('2036-09-01', 'YYYY-MM-DD'), '9876543204');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Catalina', 'Gallardo', 'catalina.gallardo@email.com', TO_DATE('2036-10-14', 'YYYY-MM-DD'), '9123456704');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristian', 'Reyes', 'cristian.reyes@email.com', TO_DATE('2036-11-20', 'YYYY-MM-DD'), '9654321004');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Isidora', 'Morales', 'isidora.morales@email.com', TO_DATE('2036-12-05', 'YYYY-MM-DD'), '9098765404');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'José', 'Vidal', 'jose.vidal@email.com', TO_DATE('2037-01-18', 'YYYY-MM-DD'), '9432109804');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Loreto', 'Garrido', 'loreto.garrido@email.com', TO_DATE('2037-02-23', 'YYYY-MM-DD'), '9876012304');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Margarita', 'Sepúlveda', 'margarita.sepulveda@email.com', TO_DATE('2037-03-08', 'YYYY-MM-DD'), '9210987604');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Daniel', 'Cáceres', 'daniel.caceres@email.com', TO_DATE('2037-04-01', 'YYYY-MM-DD'), '9765432104');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pamela', 'Gutiérrez', 'pamela.gutierrez@email.com', TO_DATE('2037-05-15', 'YYYY-MM-DD'), '9543210904');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Benjamín', 'Ortega', 'benjamin.ortega@email.com', TO_DATE('2037-06-20', 'YYYY-MM-DD'), '9876543203');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ignacia', 'Pinto', 'ignacia.pinto@email.com', TO_DATE('2037-07-04', 'YYYY-MM-DD'), '9123456703');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Pablo', 'Soto', 'pablo.soto@email.com', TO_DATE('2037-08-18', 'YYYY-MM-DD'), '9654321003');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Macarena', 'Herrera', 'macarena.herrera@email.com', TO_DATE('2037-09-25', 'YYYY-MM-DD'), '9098765403');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Javier', 'Vargas', 'javier.vargas@email.com', TO_DATE('2037-10-09', 'YYYY-MM-DD'), '9432109803');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Tamara', 'Gallardo', 'tamara.gallardo@email.com', TO_DATE('2037-11-01', 'YYYY-MM-DD'), '9876012303');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Cristóbal', 'Reyes', 'cristobal.reyes@email.com', TO_DATE('2037-12-06', 'YYYY-MM-DD'), '9210987603');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Verónica', 'Morales', 'veronica.morales@email.com', TO_DATE('2038-01-11', 'YYYY-MM-DD'), '9765432103');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Luis', 'Vidal', 'luis.vidal@email.com', TO_DATE('2038-02-17', 'YYYY-MM-DD'), '9543210903');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Claudia', 'Garrido', 'claudia.garrido@email.com', TO_DATE('2038-03-24', 'YYYY-MM-DD'), '9876543202');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Eugenio', 'Sepúlveda', 'eugenio.sepulveda@email.com', TO_DATE('2038-04-09', 'YYYY-MM-DD'), '9123456702');
 
 -- Insertar Ventas y Detalles de Venta (más de 100 ventas)
-DECLARE
-    v_total_venta NUMBER;
-    v_cliente_id NUMBER;
-    v_videojuego_id NUMBER;
-    v_cantidad NUMBER;
-    v_precio NUMBER;
-BEGIN
-    FOR i IN 1..200 LOOP
-        -- Seleccionar un cliente al azar
-        SELECT cliente_id INTO v_cliente_id FROM (SELECT cliente_id FROM clientes ORDER BY DBMS_RANDOM.VALUE) WHERE ROWNUM = 1;
+-- Insertar Ventas (100 ventas explícitas, una para cada cliente)
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 1, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 2, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 3, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 4, 39.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 5, 119.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 6, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 7, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 8, 149.97);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 9, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 10, 89.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 11, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 12, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 13, 129.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 14, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 15, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 16, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 17, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 18, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 19, 139.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 20, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 21, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 22, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 23, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 24, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 25, 119.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 26, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 27, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 28, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 29, 39.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 30, 89.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 31, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 32, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 33, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 34, 139.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 35, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 36, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 37, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 38, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 39, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 40, 119.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 41, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 42, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 43, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 44, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 45, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 46, 129.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 47, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 48, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 49, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 50, 39.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 51, 89.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 52, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 53, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 54, 129.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 55, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 56, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 57, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 58, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 59, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 60, 139.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 61, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 62, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 63, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 64, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 65, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 66, 119.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 67, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 68, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 69, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 70, 39.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 71, 89.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 72, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 73, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 74, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 75, 139.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 76, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 77, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 78, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 79, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 80, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 81, 119.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 82, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 83, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 84, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 85, 79.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 86, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 87, 129.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 88, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 89, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 90, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 91, 39.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 92, 89.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 93, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 94, 109.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 95, 49.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 96, 139.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 97, 69.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 98, 99.98);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 99, 59.99);
+INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 100, 79.98);
 
-        -- Insertar la cabecera de la venta
-        INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, v_cliente_id, 0) RETURNING venta_id INTO v_total_venta;
+---
 
-        -- Variable para el total de la venta
-        v_total_venta := 0;
-
-        -- Insertar entre 1 y 3 detalles por venta
-        FOR j IN 1..TRUNC(DBMS_RANDOM.VALUE(1, 4)) LOOP
-            -- Seleccionar un videojuego al azar
-            SELECT videojuego_id, precio INTO v_videojuego_id, v_precio FROM (SELECT videojuego_id, precio FROM videojuegos ORDER BY DBMS_RANDOM.VALUE) WHERE ROWNUM = 1;
-            
-            -- Cantidad aleatoria
-            v_cantidad := TRUNC(DBMS_RANDOM.VALUE(1, 3));
-
-            -- Insertar el detalle de la venta
-            INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario)
-            VALUES (seq_detalles_venta.NEXTVAL, seq_ventas.CURRVAL, v_videojuego_id, v_cantidad, v_precio);
-            
-            -- Actualizar el stock del videojuego
-            UPDATE videojuegos SET stock = stock - v_cantidad WHERE videojuego_id = v_videojuego_id;
-
-            -- Acumular el total de la venta
-            v_total_venta := v_total_venta + (v_cantidad * v_precio);
-        END LOOP;
-        
-        -- Actualizar el total en la tabla de ventas
-        UPDATE ventas SET total_venta = v_total_venta WHERE venta_id = seq_ventas.CURRVAL;
-    END LOOP;
-    COMMIT;
-END;
-/
+-- Insertar Detalles de Venta (100 registros)
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 1, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 1, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 2, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 3, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 3, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 4, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 5, 3, 2, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 6, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 7, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 8, 2, 3, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 9, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 10, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 10, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 11, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 12, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 13, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 13, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 14, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 15, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 15, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 16, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 17, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 17, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 18, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 19, 4, 2, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 20, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 21, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 21, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 22, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 23, 1, 2, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 24, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 25, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 25, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 26, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 27, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 28, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 28, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 29, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 30, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 30, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 31, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 32, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 32, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 33, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 34, 4, 2, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 35, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 36, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 36, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 37, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 38, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 38, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 39, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 40, 3, 2, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 41, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 42, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 42, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 43, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 44, 1, 2, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 45, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 46, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 46, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 47, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 48, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 49, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 49, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 50, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 51, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 51, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 52, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 53, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 54, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 54, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 55, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 56, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 56, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 57, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 58, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 58, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 59, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 60, 4, 2, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 61, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 62, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 62, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 63, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 64, 1, 2, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 65, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 66, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 66, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 67, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 68, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 69, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 69, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 70, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 71, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 71, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 72, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 73, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 73, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 74, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 75, 4, 2, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 76, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 77, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 77, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 78, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 79, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 79, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 80, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 81, 3, 2, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 82, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 83, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 83, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 84, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 85, 1, 2, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 86, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 87, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 87, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 88, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 89, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 90, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 90, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 91, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 92, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 92, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 93, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 94, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 94, 5, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 95, 2, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 96, 4, 2, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 97, 4, 1, 69.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 98, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 98, 6, 1, 49.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 99, 3, 1, 59.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 100, 1, 1, 39.99);
+INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 100, 2, 1, 49.99);
