@@ -14,13 +14,13 @@ INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataforma
 INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'Xbox Series X');
 INSERT INTO plataforma (plataforma_id, nombre_plataforma) VALUES (seq_plataformas.NEXTVAL, 'Nintendo Switch');
 
--- Insertar Desarrolladore
-INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'CD Projekt Red');
-INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Rockstar Games');
-INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Naughty Dog');
-INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'FromSoftware');
-INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Nintendo');
-INSERT INTO desarrolladore (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'EA Sports');
+-- Insertar Desarrollador
+INSERT INTO desarrollador (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'CD Projekt Red');
+INSERT INTO desarrollador (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Rockstar Games');
+INSERT INTO desarrollador (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Naughty Dog');
+INSERT INTO desarrollador (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'FromSoftware');
+INSERT INTO desarrollador (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'Nintendo');
+INSERT INTO desarrollador (desarrollador_id, nombre_desarrollador) VALUES (seq_desarrolladores.NEXTVAL, 'EA Sports');
 
 -- Insertar Videojuego
 INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Witcher 3: Wild Hunt', 'Un juego de rol de mundo abierto.', TO_DATE('2015-05-19', 'YYYY-MM-DD'), 39.99, 150, 3, 1, 1);
@@ -30,8 +30,7 @@ INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, p
 INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'The Legend of Zelda: Breath of the Wild', 'Explora el vasto reino de Hyrule.', TO_DATE('2017-03-03', 'YYYY-MM-DD'), 59.99, 250, 2, 4, 5);
 INSERT INTO videojuego (videojuego_id, titulo, descripcion, fecha_lanzamiento, precio, stock, genero_id, plataforma_id, desarrollador_id) VALUES (seq_videojuegos.NEXTVAL, 'FIFA 23', 'El simulador de fútbol más popular.', TO_DATE('2022-09-27', 'YYYY-MM-DD'), 49.99, 400, 5, 1, 6);
 
--- Insertar Clientes (más de 100 para un buen volumen de datos)
--- Insertar Cliente (100 clientes explícitos)
+-- Insertar Cliente
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Vicente', 'Alarcón', 'vicente.alarcon@email.com', TO_DATE('2023-01-15', 'YYYY-MM-DD'), '9876543210');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Ignacio', 'Bittner', 'ignacio.bittner@email.com', TO_DATE('2023-02-20', 'YYYY-MM-DD'), '9123456789');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Sofía', 'González', 'sofia.gonzalez@email.com', TO_DATE('2023-03-10', 'YYYY-MM-DD'), '9567890123');
@@ -217,8 +216,7 @@ INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefo
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Claudia', 'Garrido', 'claudia.garrido@email.com', TO_DATE('2038-03-24', 'YYYY-MM-DD'), '9876543202');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_clientes.NEXTVAL, 'Eugenio', 'Sepúlveda', 'eugenio.sepulveda@email.com', TO_DATE('2038-04-09', 'YYYY-MM-DD'), '9123456702');
 
--- Insertar Ventas y Detalles de Venta (más de 100 ventas)
--- Insertar Ventas (100 ventas explícitas, una para cada cliente)
+-- Insertar Ventas
 INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 1, 99.98);
 INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 2, 59.99);
 INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 3, 109.98);
@@ -319,8 +317,6 @@ INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVA
 INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 98, 99.98);
 INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 99, 59.99);
 INSERT INTO ventas (venta_id, cliente_id, total_venta) VALUES (seq_ventas.NEXTVAL, 100, 79.98);
-
----
 
 -- Insertar Detalles de Venta (100 registros)
 INSERT INTO detalles_venta (detalle_id, venta_id, videojuego_id, cantidad, precio_unitario) VALUES (seq_detalles_venta.NEXTVAL, 1, 1, 1, 39.99);
