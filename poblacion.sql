@@ -105,7 +105,7 @@ INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefo
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Marcelo', 'Soto', 'marcelo.soto@email.com', TO_DATE('2028-12-11', 'YYYY-MM-DD'), '9210987650');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Claudia', 'Herrera', 'claudia.herrera@email.com', TO_DATE('2029-01-24', 'YYYY-MM-DD'), '9765432150');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Oscar', 'Vargas', 'oscar.vargas@email.com', TO_DATE('2029-02-09', 'YYYY-MM-DD'), '9543210950');
-INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Alejandra', 'Gallardo', 'alejandra.gallardo@email.com', TO_DATE('2029-03-22', 'YYYY-MM-DD'), '9876543240');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Alejandra', 'Alarcon', 'alejandra.alarcon@email.com', TO_DATE('2029-03-22', 'YYYY-MM-DD'), '9876543240');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Rubén', 'Reyes', 'ruben.reyes@email.com', TO_DATE('2029-04-16', 'YYYY-MM-DD'), '9123456740');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Laura', 'Morales', 'laura.morales@email.com', TO_DATE('2029-05-01', 'YYYY-MM-DD'), '9654321040');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Javier', 'Vidal', 'javier.vidal@email.com', TO_DATE('2029-06-08', 'YYYY-MM-DD'), '9098765440');
@@ -158,7 +158,7 @@ INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefo
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Benjamín', 'Herrera', 'benjamin.herrera@email.com', TO_DATE('2033-05-18', 'YYYY-MM-DD'), '9876012309');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Ignacia', 'Vargas', 'ignacia.vargas@email.com', TO_DATE('2033-06-22', 'YYYY-MM-DD'), '9210987609');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Pablo', 'Gallardo', 'pablo.gallardo@email.com', TO_DATE('2033-07-29', 'YYYY-MM-DD'), '9765432109');
-INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Macarena', 'Reyes', 'macarena.reyes@email.com', TO_DATE('2033-08-11', 'YYYY-MM-DD'), '9543210909');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Francisco', 'Aranguiz', 'francisco.aranguiz@email.com', TO_DATE('2033-08-11', 'YYYY-MM-DD'), '9543210909');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Javier', 'Morales', 'javier.morales@email.com', TO_DATE('2033-09-03', 'YYYY-MM-DD'), '9876543208');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Tamara', 'Vidal', 'tamara.vidal@email.com', TO_DATE('2033-10-10', 'YYYY-MM-DD'), '9123456708');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Cristóbal', 'Garrido', 'cristobal.garrido@email.com', TO_DATE('2033-11-23', 'YYYY-MM-DD'), '9654321008');
@@ -183,12 +183,12 @@ INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefo
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Camila', 'Soto', 'camila.soto@email.com', TO_DATE('2035-06-08', 'YYYY-MM-DD'), '9098765406');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Andrés', 'Herrera', 'andres.herrera@email.com', TO_DATE('2035-07-13', 'YYYY-MM-DD'), '9432109806');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Carolina', 'Vargas', 'carolina.vargas@email.com', TO_DATE('2035-08-26', 'YYYY-MM-DD'), '9876012306');
-INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Diego', 'Gallardo', 'diego.gallardo@email.com', TO_DATE('2035-09-09', 'YYYY-MM-DD'), '9210987606');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Diego', 'Bittner', 'diego.bittner@email.com', TO_DATE('2035-09-09', 'YYYY-MM-DD'), '9210987606');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Valentina', 'Reyes', 'valentina.reyes@email.com', TO_DATE('2035-10-22', 'YYYY-MM-DD'), '9765432106');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Sebastián', 'Morales', 'sebastian.morales@email.com', TO_DATE('2035-11-05', 'YYYY-MM-DD'), '9543210906');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Constanza', 'Vidal', 'constanza.vidal@email.com', TO_DATE('2035-12-18', 'YYYY-MM-DD'), '9876543205');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Mauricio', 'Garrido', 'mauricio.garrido@email.com', TO_DATE('2036-01-01', 'YYYY-MM-DD'), '9123456705');
-INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Daniela', 'Sepúlveda', 'daniela.sepulveda@email.com', TO_DATE('2036-02-14', 'YYYY-MM-DD'), '9654321005');
+INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Daniela', 'Aranguiz', 'daniela.aranguiz@email.com', TO_DATE('2036-02-14', 'YYYY-MM-DD'), '9654321005');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Esteban', 'Cáceres', 'esteban.caceres@email.com', TO_DATE('2036-03-29', 'YYYY-MM-DD'), '9098765405');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Romina', 'Gutiérrez', 'romina.gutierrez@email.com', TO_DATE('2036-04-11', 'YYYY-MM-DD'), '9432109805');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Patricio', 'Ortega', 'patricio.ortega@email.com', TO_DATE('2036-05-01', 'YYYY-MM-DD'), '9876012305');
@@ -216,8 +216,7 @@ INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefo
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Claudia', 'Garrido', 'claudia.garrido@email.com', TO_DATE('2038-03-24', 'YYYY-MM-DD'), '9876543202');
 INSERT INTO cliente (cliente_id, nombre, apellido, email, fecha_registro, telefono) VALUES (seq_cliente.NEXTVAL, 'Eugenio', 'Sepúlveda', 'eugenio.sepulveda@email.com', TO_DATE('2038-04-09', 'YYYY-MM-DD'), '9123456702');
 
--- Insertar Ventas y Detalles de Venta (más de 100 ventas)
--- Insertar Ventas (100 ventas explícitas, una para cada cliente)
+-- Insertar Ventas
 INSERT INTO venta (venta_id, cliente_id, total_venta) VALUES (seq_venta.NEXTVAL, 1, 99.98);
 INSERT INTO venta (venta_id, cliente_id, total_venta) VALUES (seq_venta.NEXTVAL, 2, 59.99);
 INSERT INTO venta (venta_id, cliente_id, total_venta) VALUES (seq_venta.NEXTVAL, 3, 109.98);
