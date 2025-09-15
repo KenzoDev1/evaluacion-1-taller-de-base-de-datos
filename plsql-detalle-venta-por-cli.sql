@@ -45,6 +45,10 @@ v_cliente_id cliente.cliente_id%TYPE := 50;
 
 historial_compras varray_ventas_t := varray_ventas_t();
 
+rec_cliente       cliente%ROWTYPE;
+
+e_cliente_sin_ventas EXCEPTION;
+
 CURSOR cur_detalle_venta(p_cli_id cliente.cliente_id%TYPE) IS
 SELECT dv.detalle_id,
 dv.venta_id,
@@ -56,6 +60,11 @@ INNER JOIN venta v ON (dv.venta_id=v.venta_id)
 WHERE v.cliente_id=p_cli_id;
 
 BEGIN
+
+SELECT *
+INTO rec_cliente
+FROM cliente
+WHERE cliente_id = v_cliente_id;
 
 -- Se agregan los records al VARRAY segun la restriccion del ID del cliente
 FOR rec_detalle_venta IN cur_detalle_venta(v_cliente_id) LOOP
@@ -74,9 +83,17 @@ FOR rec_detalle_venta IN cur_detalle_venta(v_cliente_id) LOOP
     );
 END LOOP;
 
+IF historial_compras.COUNT = 0 THEN
+    RAISE e_cliente_sin_ventas;
+END IF;
+
+DBMS_OUTPUT.PUT_LINE('=============================================');
+DBMS_OUTPUT.PUT_LINE('Cliente ID: '||v_cliente_id);
+DBMS_OUTPUT.PUT_LINE('=============================================');
+DBMS_OUTPUT.PUT_LINE('Detalle venta');
+DBMS_OUTPUT.PUT_LINE('=============================================');
 -- En Oracle SQL, para indexar una lista, empieza desde el 1 y no desde el 0
 FOR i IN 1..historial_compras.COUNT LOOP
-    DBMS_OUTPUT.PUT_LINE('=============================================');
     DBMS_OUTPUT.PUT_LINE('Detalle ID: '||historial_compras(i).detalle_id);
     DBMS_OUTPUT.PUT_LINE('Venta ID: '||historial_compras(i).venta_id);
     DBMS_OUTPUT.PUT_LINE('Videojuego ID: '||historial_compras(i).videojuego_id);
@@ -84,6 +101,23 @@ FOR i IN 1..historial_compras.COUNT LOOP
     DBMS_OUTPUT.PUT_LINE('Precio unitario: '||historial_compras(i).precio_unitario);
     DBMS_OUTPUT.PUT_LINE('=============================================');
 END LOOP;
+EXCEPTION
+    -- Captura la excepción predefinida por Oracle cuando un SELECT...INTO no encuentra filas.
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('*********************************************');
+        DBMS_OUTPUT.PUT_LINE('ERROR: El cliente con ID ' || v_cliente_id || ' no fue encontrado en la base de datos.');
+        DBMS_OUTPUT.PUT_LINE('*********************************************');
 
+    -- Captura la excepción que nosotros definimos y lanzamos manualmente.
+    WHEN e_cliente_sin_ventas THEN
+        DBMS_OUTPUT.PUT_LINE('*********************************************');
+        DBMS_OUTPUT.PUT_LINE('AVISO: El cliente ' || rec_cliente.nombre || ' ' || rec_cliente.apellido || ' no tiene ventas registradas.');
+        DBMS_OUTPUT.PUT_LINE('*********************************************');
+
+    -- Una buena práctica es capturar cualquier otro error inesperado.
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('*********************************************');
+        DBMS_OUTPUT.PUT_LINE('Ha ocurrido un error inesperado: ' || SQLERRM);
+        DBMS_OUTPUT.PUT_LINE('*********************************************');
 END;
 /
