@@ -1,45 +1,42 @@
 /*
-La función `FN_CATEGORIZAR_CLIENTE` recibe como parámetro el identificador de un cliente y 
-consulta la base de datos para contar cuántas ventas tiene registradas en las tablas `VENTA` y `DETALLE_VENTA`.
-Con ese resultado, aplica una lógica de clasificación: si el cliente tiene más de una venta se categoriza como *CLIENTE FRECUENTE*,
-de lo contrario se clasifica como *CLIENTE OCASIONAL*. Finalmente, devuelve esa categoría como un valor de tipo `VARCHAR2`,
-permitiendo usarla en consultas o informes para identificar rápidamente el nivel de actividad de cada cliente.
+ FN_CATEGORIZAR_CLIENTE (con parámetros) permite procesar la información de un cliente específico. 
+ Es reutilizable y esencial para el informe de cliente y el programa de fidelización.
 */
-
-CREATE OR REPLACE FUNCTION FN_CATEGORIZAR_CLIENTE(id_cliente IN CLIENTE.CLIENTE_ID%TYPE) 
+CREATE OR REPLACE FUNCTION FN_CATEGORIZAR_CLIENTE(
+    p_cliente_id IN CLIENTE.CLIENTE_ID%TYPE
+) 
 RETURN VARCHAR2
 IS 
-V_CATEGORIA VARCHAR2(20);
-V_TOTAL NUMBER;
+    v_total_gastado NUMBER;
+    v_categoria     VARCHAR2(20);
 BEGIN
+    -- Primero, calculamos el total gastado por el cliente
+    -- Sumamos el total de todas sus ventas
+    SELECT SUM(TOTAL_VENTA)
+    INTO v_total_gastado
+    FROM VENTA
+    WHERE CLIENTE_ID = p_cliente_id;
 
-    SELECT COUNT(DV.VENTA_ID)
-    INTO V_TOTAL
-    FROM DETALLE_VENTA DV
-    JOIN VENTA V ON (V.VENTA_ID = DV.VENTA_ID)
-    JOIN CLIENTE C ON (C.CLIENTE_ID = V.CLIENTE_ID)
-
-    WHERE C.CLIENTE_ID = id_cliente;
-    
-    IF V_TOTAL > 2 THEN
-        V_CATEGORIA := 'CLIENTE FRECUENTE';
+    -- Si no ha comprado nada, el total será NULL. Lo manejamos.
+    IF v_total_gastado IS NULL OR v_total_gastado = 0 THEN
+        v_categoria := 'SIN CATEGORIA';
+    ELSIF v_total_gastado <= 100 THEN
+        v_categoria := 'BRONCE';
+    ELSIF v_total_gastado <= 300 THEN
+        v_categoria := 'PLATA';
     ELSE
-        V_CATEGORIA := 'CLIENTE OCASIONAL';
+        v_categoria := 'ORO';
     END IF;
 
-    RETURN V_CATEGORIA;
+    RETURN v_categoria;
     
 EXCEPTION
+    -- Manejamos el caso de que el cliente no exista
     WHEN NO_DATA_FOUND THEN
+        -- Aunque un SUM(NULL) devuelve NULL (manejado arriba),
+        -- es buena práctica mantener la excepción por si se cambia la lógica.
         RETURN 'CLIENTE INEXISTENTE';
-    WHEN TOO_MANY_ROWS THEN
-        RETURN 'ERROR: CLIENTE DUPLICADO';
     WHEN OTHERS THEN
         RETURN 'ERROR: ' || SQLERRM;
-        
-
 END;
-
 /
-
-SELECT fn_categorizar_cliente(1) AS CATEGORIA FROM dual;
