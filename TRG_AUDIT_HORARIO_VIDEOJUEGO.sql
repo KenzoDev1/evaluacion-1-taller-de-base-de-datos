@@ -31,4 +31,3 @@ EXCEPTION
         -- Relanzamos el error para detener la transacción
         RAISE;
 END;
-/

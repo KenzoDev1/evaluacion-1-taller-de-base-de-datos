@@ -12,7 +12,6 @@ EXCEPTION
          RAISE;
       END IF;
 END;
-/
 
 -- Luego se elimina el RECORD base
 BEGIN
@@ -23,7 +22,6 @@ EXCEPTION
          RAISE;
       END IF;
 END;
-/
 
 -- Se crea un record de detalle venta, realiza una funcion de molde para la creacion del varray
 CREATE OR REPLACE TYPE rec_detalle_venta_t AS OBJECT (
@@ -33,11 +31,9 @@ CREATE OR REPLACE TYPE rec_detalle_venta_t AS OBJECT (
     cantidad NUMBER(3),
     precio_unitario NUMBER(8,2)
 );
-/
 
 
 CREATE OR REPLACE TYPE varray_ventas_t AS VARRAY(100) OF rec_detalle_venta_t;
-/
 
 DECLARE
 
@@ -86,4 +82,3 @@ FOR i IN 1..historial_compras.COUNT LOOP
 END LOOP;
 
 END;
-/

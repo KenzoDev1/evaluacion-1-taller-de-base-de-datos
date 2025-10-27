@@ -34,4 +34,3 @@ EXCEPTION
         ROLLBACK;
         DBMS_OUTPUT.PUT_LINE('Error en procesamiento masivo: ' || SQLERRM);
 END;
-/
