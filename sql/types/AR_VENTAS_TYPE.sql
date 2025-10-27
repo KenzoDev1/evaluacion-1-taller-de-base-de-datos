@@ -1,0 +1,3 @@
+--Varray de ventas
+-- IMPORTANTE: Debe crearse después de REC_VENTA_TYPE
+CREATE OR REPLACE TYPE AR_VENTAS AS VARRAY(200) OF REC_VENTA;
